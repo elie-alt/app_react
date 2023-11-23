@@ -1,0 +1,18 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .liste ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  .liste li {
+    margin-right: 8em;
+  }
+  
+  .liste img {
+    width: 10em;
+    height: 10em;
+  }
