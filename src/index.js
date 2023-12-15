@@ -1,24 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { useState } from 'react';
+import { StrictMode } from 'react';
+
+
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import App from "./App";
-import Profile from "./component/Profile.js";
-import MyFirstComponent from "./component/MyFirstComponent";
-import Avatar from "./component/Avatar";
-import Character from "./component/Character";
-import Myfirstcomp from "./component/Myfirstcomp";
-import Card from "./component/Card";
-import Counter from "./component/counter_state_hook.js";
-import Compteur from "./component/Compteur.js";
-import MyComp from "./component/MyComp.js";
-import MyCheckLike from "./component/MyCheckLike.js";
-import Paola from "./component/Paola.js";
-import MyForm from "./component/MyForm.js";
-import MyFormImage from "./component/MyFormImage.js";
-import Maliste from "./component/Maliste.js";
-import Malisteadd from "./component/Malisteadd.js";
-import ShoppingList from "./component/ShoppingList.js";
+import Profile from "./Profile.js";
+import MyFirstComponent from "./MyFirstComponent";
+import Avatar from "./Avatar";
+import Character from "./Character";
+import Myfirstcomp from "./Myfirstcomp";
+import Card from "./Card";
+import Counter from "./counter_state_hook.js";
+import Compteur from "./Compteur.js";
+import MyComp from "./MyComp.js";
+import MyCheckLike from "./MyCheckLike.js";
+import Paola from "./Paola.js";
+import MyForm from "./MyForm.js";
+import MyFormImage from "./MyFormImage.js";
+import Maliste from "./Maliste.js";
+// import Malisteadd from "./Malisteadd.js";
+import ShoppingList from "./ShoppingList.js";
 
 
 //////
@@ -75,7 +79,7 @@ const info = [
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <StrictMode>
     <App />
     <Profile />
     <MyFirstComponent prenom="Jean" color="red" />
@@ -89,9 +93,8 @@ root.render(
     <MyForm />
     <MyFormImage />
     <Maliste />
-    <Malisteadd />
     <ShoppingList />
-  </React.StrictMode>
+  </StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

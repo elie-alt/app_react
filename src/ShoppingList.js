@@ -27,12 +27,11 @@ const initialProducts = [
 ];
 export default function ShoppingList() {
   const [counters, setCounters] = useState(initialProducts);
-  const [panier, setPanier] = useState(0);
+  const [panier, setPanier] = useState({items:0, amount: 0});
   const [articles, setArticles] = useState(0);
 
   function ClickIncrement(idtruc) {
-    setCounters(
-      counters.map((counter) => {
+      const updatedshoplist = counters.map((counter) => {
         if (counter.id === idtruc) {
           return {
             ...counter,
@@ -41,11 +40,18 @@ export default function ShoppingList() {
         } else {
           return counter;
         }
-      }),
-    );
-    setArticles(articles + 1);
-    setPanier(panier == counters);
-  }
+      });
+    setCounters(updatedshoplist);
+
+    const SelectedItem = counters.find((counter) => counter.id === id);
+    if (SelectedItem){
+      setPanier({
+        items: panier.count + 1,
+        amount: panier.amount + SelectedItem.prix,
+
+      });
+    };
+  };
 
   function ClickDecrement(idtruc) {
     setCounters(
@@ -61,7 +67,6 @@ export default function ShoppingList() {
       }),
     );
     setArticles(articles - 1);
-    console.log(articles);
   }
 
   return (
