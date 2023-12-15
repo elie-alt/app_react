@@ -43,14 +43,14 @@ export default function ShoppingList() {
       });
     setCounters(updatedshoplist);
 
-    const SelectedItem = counters.find((counter) => counter.id === id);
-    if (SelectedItem){
-      setPanier({
-        items: panier.count + 1,
-        amount: panier.amount + SelectedItem.prix,
+    // const SelectedItem = counters.find((counter) => counter.id === id);
+    // if (SelectedItem){
+    //   setPanier({
+    //     items: panier.count + 1,
+    //     amount: panier.amount + SelectedItem.prix,
 
-      });
-    };
+    //   });
+    // };
   };
 
   function ClickDecrement(idtruc) {

@@ -23,6 +23,7 @@ import MyFormImage from "./MyFormImage.js";
 import Maliste from "./Maliste.js";
 // import Malisteadd from "./Malisteadd.js";
 import ShoppingList from "./ShoppingList.js";
+import Appli from "./Appli.js";
 
 
 //////
@@ -94,6 +95,7 @@ root.render(
     <MyFormImage />
     <Maliste />
     <ShoppingList />
+    <Appli />
   </StrictMode>
 );
 
