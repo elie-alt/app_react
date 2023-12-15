@@ -1,0 +1,7 @@
+3 étapes : - montage/rendu initial  - update  - démontage
+on peut rajouter des effets selon l'étape
+UseEffect s'éxécute toujours au montage du composant mais il s'éxécute aussi à chaque mise à jour du state.
+pour contrer ce phénomène on rajoute un tableau vide dans les paramètres du useEffect. Ainsi le useeFFECT ne s'éxecutera seulement au montage du composant.
+Pour arreter l'effet lors du démontage, on retourn une fonction dans le use effect pour arreter l'effet.
+L'éxecution du useeffect dépend de la propritété listé dans le tableau de dépendances.
+
