@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { useState } from 'react';
 import { StrictMode } from 'react';
 
 
@@ -9,8 +8,6 @@ import reportWebVitals from './reportWebVitals';
 import App from "./App";
 import Profile from "./Profile.js";
 import MyFirstComponent from "./MyFirstComponent";
-import Avatar from "./Avatar";
-import Character from "./Character";
 import Myfirstcomp from "./Myfirstcomp";
 import Card from "./Card";
 import Counter from "./counter_state_hook.js";
@@ -21,9 +18,9 @@ import Paola from "./Paola.js";
 import MyForm from "./MyForm.js";
 import MyFormImage from "./MyFormImage.js";
 import Maliste from "./Maliste.js";
-// import Malisteadd from "./Malisteadd.js";
 import ShoppingList from "./ShoppingList.js";
 import Appli from "./Appli.js";
+import DocumentTitle from "./DocumentTitle.js";
 
 
 //////
@@ -81,7 +78,7 @@ const info = [
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <StrictMode>
-    <App />
+    {/* <App />
     <Profile />
     <MyFirstComponent prenom="Jean" color="red" />
     <Card infos={info} />
@@ -94,8 +91,9 @@ root.render(
     <MyForm />
     <MyFormImage />
     <Maliste />
-    <ShoppingList />
+    {/*<ShoppingList /> */}
     <Appli />
+    <DocumentTitle/>
   </StrictMode>
 );
 
