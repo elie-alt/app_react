@@ -4,27 +4,31 @@ import { useEffect, useState } from 'react';
 const DocumentTitle = () => {
     const [title, setTitle] = useState("");
     const [scrollY, setScrollY] = useState(0);
+    const [showTitle, setShowTitle] = useState(true);
 
     useEffect(() => {
         document.title = title;
     }, [title]);
 
     useEffect(() => {
-        const div = document.querySelector(".scrollable-div");
-        div.addEventListener("scroll", handleScroll);
-        return () => div.removeEventListener("scroll", handleScroll);
-    }, []);
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
 
-    const handleScroll = () => {
-        const div = document.querySelector(".scrollable-div");
-        setScrollY(div.scrollTop);
-    };
+      const handleScroll = () => {
+        setScrollY(window.scrollY);
+      };
 
     return(
         <>
+            <input type="checkbox" checked={showTitle} onChange={(e) => setShowTitle(e.target.checked)} />
+            <label htmlFor="showTitle">Afficher le titre</label>
+            {showTitle && (
             <input type="text" placeholder="Entrez un titre" onChange={(e) => setTitle(e.target.value)}></input>
+            )}
             <p>Les coordonnées Y de la page sont : {scrollY}</p>
-            <div class="scrollable-div" style={{ height: "100vh", overflow: "auto" }} />
+            <div style={{ height: "100vh" }} >
+            </div>
         </>
     );
 
