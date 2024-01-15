@@ -21,9 +21,6 @@ import Maliste from "./Maliste.js";
 import ShoppingList from "./ShoppingList.js";
 import Appli from "./Appli.js";
 import DocumentTitle from "./DocumentTitle.js";
-import Footer from "./Darkmode/Footer.js";
-import Header from "./Darkmode/Header.js";
-import Main from "./Darkmode/Main.js";
 
 
 //////
@@ -78,6 +75,45 @@ const info = [
 ];
 
 
+
+const Header = () => {
+  return (
+    <div className="header">
+      <h1>En-tête</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan eros ac lectus ultrices, id tincidunt quam scelerisque.</p>
+    </div>
+  );
+};
+
+const Main = () => {
+  return (
+    <div className="main">
+      <h2>Contenu principal</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan eros ac lectus ultrices, id tincidunt quam scelerisque. Vestibulum ornare lectus ac nibh scelerisque, nec semper quam aliquam.</p>
+    </div>
+  );
+};
+
+const ChangeModeButton = ({ DarkMode }) => {
+  return (
+    <button
+      type="button"
+      onClick={DarkMode}>
+      Changer de mode
+    </button>
+  );
+};
+
+const Footer = () => {
+  return (
+    <div className="footer">
+      <h3>Pied de page</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam accumsan eros ac lectus ultrices, id tincidunt quam scelerisque.</p>
+      <ChangeModeButton/>
+    </div>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <StrictMode>
@@ -97,9 +133,11 @@ root.render(
     <ShoppingList />
     <Appli />
     <DocumentTitle/>*/}
-    <footer/>
-    <header/>
-    <main/>
+    <div className='container'>
+      <Header/>
+      <Main/>
+      <Footer/>
+    </div>
   </StrictMode>
 );
 
