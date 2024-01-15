@@ -21,6 +21,9 @@ import Maliste from "./Maliste.js";
 import ShoppingList from "./ShoppingList.js";
 import Appli from "./Appli.js";
 import DocumentTitle from "./DocumentTitle.js";
+import Footer from "./Darkmode/Footer.js";
+import Header from "./Darkmode/Header.js";
+import Main from "./Darkmode/Main.js";
 
 
 //////
@@ -91,9 +94,12 @@ root.render(
     <MyForm />
     <MyFormImage />
     <Maliste />
-    {/*<ShoppingList /> */}
+    <ShoppingList />
     <Appli />
-    <DocumentTitle/>
+    <DocumentTitle/>*/}
+    <footer/>
+    <header/>
+    <main/>
   </StrictMode>
 );
 
