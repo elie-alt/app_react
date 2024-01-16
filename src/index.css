@@ -30,3 +30,8 @@ code {
   height: 20vh;
   justify-content: flex-end;
 }
+
+.dark{
+  background-color: black;
+  color:aliceblue;
+}
